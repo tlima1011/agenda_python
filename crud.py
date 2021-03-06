@@ -34,6 +34,8 @@ def processInsert():
     finally:
         print('Registro inserido' )
 
+
+
 def entradaConsulta():
 
     vsql = "SELECT * FROM TB_CONTATOS"
@@ -53,6 +55,8 @@ def consultarTodos(vcon, vsql):
     res = consultarTodos(vcon, sql)
     for r in res:
         print(r)
+    print('*** FIM DA CONSULTA ***')
+
 
 def entradaConsultaId():
     idConsulta = int(input('Informe o ID para consultar: '))
@@ -60,12 +64,15 @@ def entradaConsultaId():
     res = consultarPorId(vcon, sql)
     for r in res:
         print(r)
+    print('*** FIM DA CONSULTA ***')
+
+
 
 def consultarPorId(vcon, sql):
     c = vcon.cursor()
     c.execute(sql)
     resultado = c.fetchall()
-    print('***TABELA DE CONTATOS: ***' )
+    print('***TABELA DE CONTATO POR ID: ***' )
     return resultado
 
 #Update by ID
@@ -90,7 +97,6 @@ def atualizar(conexao, sql):
     finally:
         print("Encerrado procedimento de atualização")
 
-
 #Delete by ID
 def idDeletar():
     id_deletar = int(input('Informe o #id para deletar: '))
@@ -109,6 +115,7 @@ def deletar(conexao, sql):
         print("Ecerrado procedimento de exclusão")
 
 
-
+def encerrarBanco():
+    vcon.close()
 
 
