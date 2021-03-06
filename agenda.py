@@ -4,7 +4,7 @@ from sqlite3 import Error
 
 #Conexão com banco de dados
 def ConexaoBanco():
-    caminho = 'C:\\Users\\thiag\\Documents\\Projeto Python - BPA Technologies\SQLiteStudio\\agenda\\agendadb.db'
+    caminho = 'C:\\Users\\\\agendadb.db'
     con = None
     try:
         con = sqlite3.connect(caminho)
