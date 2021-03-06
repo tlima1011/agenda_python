@@ -6,7 +6,7 @@ import sys
 
 #Conexão com banco de dados
 def ConexaoBanco():
-    caminho = 'C:\\Users\\thiag\\Documents\\Projeto Python - BPA Technologies\SQLiteStudio\\agenda\\agendadb.db'
+    caminho = 'C:\\Users\\agenda\\agendadb.db'
     con = None
     try:
         con = sqlite3.connect(caminho)
